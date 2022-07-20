@@ -8,6 +8,7 @@ EXPOSE 3000
 RUN apk add --no-cache tini
 
 # cd to the path below
+RUN  mkdir -p /usr/src/app 
 WORKDIR /usr/src/app
 
 # copying the package file form the dockerfile dir to the working dir in the app
