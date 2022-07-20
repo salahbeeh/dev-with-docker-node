@@ -38,5 +38,5 @@ This demo app shows a "it works" simple page
 - Then it needs to copy in all files from current directory into the image.
 - Then it needs to start the container with the command `/sbin/tini -- node ./bin/www`. Be sure to use JSON array syntax for CMD. (`CMD [ "something", "something" ]`)
 - In the end you should be using FROM, RUN, WORKDIR, COPY, EXPOSE, and CMD commands
-
-
+---
+_all the steps above are implemented in the Dockerfile, you can use it as ref_
