@@ -16,13 +16,13 @@ COPY package.json package.json
 
 # install the dependencies 
 RUN npm install \
-&& npm cashe clean --force
+    && npm cache clean 
 
 # copying all the files in the dockerfile dir to the app working dir
 COPY . .
 
 # the last command: what the container start with
-CMD [ "/sbin/tini","-- ", "node","./bin/www" ]
+CMD [ "/sbin/tini","--","node","./bin/www" ]
 
 
 
