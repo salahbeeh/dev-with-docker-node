@@ -1,12 +1,19 @@
-# Instructions for Assignment
+<h1 style="text-align:center"> Developing with Docker</h1>
 
-[Build Your Own Dockerfile and Run Containers From It](https://www.udemy.com/course/docker-mastery/learn/lecture/6806638)
+_This app is orignally developed by [BretFisher ](https://github.com/BretFisher/udemy-docker-mastery/tree/main/dockerfile-assignment-1)_
 
-This directory contains a Node.js app, and you need to get it running in a container.
+<p align="center">
+<img src="./img/docker.png" alt="docker" width="220"/>
+<img src="./img/nodejs.png" alt="node" width="220"/>
+</p>
 
-No modifications to the app should be necessary, only edits to the Dockerfile in this directory.
 
-## Overview of this assignment
+This demo app shows a "it works" simple page
+- pure index.js and css styles
+- nodejs backend 
+
+## Overview of this Demo
+---
 
 - Imagine another developer gave you the instruction below, and you'll need to interpret them into what the Dockerfile should contain.
 - Once the Dockerfile builds correctly, start container locally to make sure it works on [http://localhost](http://localhost)
@@ -16,7 +23,9 @@ No modifications to the app should be necessary, only edits to the Dockerfile in
 - Then start a new container from your Hub image, and watch how it auto downloads and runs
 - Test again that it works at [http://localhost](http://localhost)
 
-## Instructions from the app developer
+## Get Started With Docker
+---
+[![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)](https://docs.docker.com/get-docker/)
 
 - you should use the `node` official image, with the alpine 6.x branch (`node:6-alpine`)
   - (Yes this is a 2-year old image of node, but all official images are always available on Docker Hub forever, to ensure even old apps still work. It is common to still need to deploy old app versions, even years later.)
@@ -30,6 +39,4 @@ No modifications to the app should be necessary, only edits to the Dockerfile in
 - Then it needs to start the container with the command `/sbin/tini -- node ./bin/www`. Be sure to use JSON array syntax for CMD. (`CMD [ "something", "something" ]`)
 - In the end you should be using FROM, RUN, WORKDIR, COPY, EXPOSE, and CMD commands
 
-## Bonus Extra Credit
 
-- This assignment will not have you setting up a complete image useful for local development, test, and prod. It's just meant to get you started with basic Dockerfile concepts and not focus too much on proper Node.js use in a container. **If you happen to be a Node.js Developer**, then after you get through more of this course, you should come back and use my [Node.js Docker Good Defaults](https://github.com/BretFisher/node-docker-good-defaults) sample project on GitHub to change this Dockerfile for better local development with more advanced topics.
